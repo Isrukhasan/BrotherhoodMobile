@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="LoginApp.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:LoginApp">
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Entry
+            x:Name="UsernameEntry"
+            Margin="10"
+            HorizontalOptions="FillAndExpand"
+            Placeholder="Username" />
+        <Entry
+            x:Name="PasswordEntry"
+            Margin="10"
+            HorizontalOptions="FillAndExpand"
+            IsPassword="True"
+            Placeholder="Password" />
+        <Button
+            Margin="10"
+            Clicked="OnLoginClicked"
+            HorizontalOptions="Center"
+            Text="Login" />
+        <Label
+            x:Name="ResultLabel"
+            Margin="10"
+            HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Spread.Brotherhood.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="Center">
+
+            <Image
+                HorizontalOptions="Center"
+                MaximumWidthRequest="250"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                Source="logo.png" />
+            <Label
+                Margin="0,-20,0,0"
+                FontSize="16"
+                HorizontalOptions="Center"
+                SemanticProperties.Description="Enter your userdetals to login"
+                SemanticProperties.HeadingLevel="Level2"
+                Text="Enter your user details to login" />
+
+            <Frame
+                Padding="10,5,10,0"
+                BackgroundColor="Azure"
+                BorderColor="Gray"
+                CornerRadius="10"
+                HeightRequest="50">
+                <Entry
+                    x:Name="username entry"
+                    FontSize="14"
+                    Placeholder="Enter username [Ex j.cox]"
+                    PlaceholderColor="LightGray"
+                    TextColor="#CC9B52" />
+            </Frame>
+
+            <Frame
+                Padding="10,5,10,0"
+                BackgroundColor="Azure"
+                BorderColor="Gray"
+                CornerRadius="10"
+                HeightRequest="50">
+                <Entry
+                    x:Name="password"
+                    ClearButtonVisibility="WhileEditing"
+                    FontSize="14"
+                    IsPassword="True"
+                    MaxLength="16"
+                    Placeholder="Enter password"
+                    PlaceholderColor="LightGray"
+                    TextColor="#CC9B52" />
+
+
+            </Frame>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+
+                </Grid.ColumnDefinitions>
+
+                <Button
+                    x:Name="CounterBtn"
+                    Grid.Column="0"
+                    BackgroundColor="#cc9b52"
+                    Clicked="OnCounterClicked"
+                    FontAttributes="Bold"
+                    FontAutoScalingEnabled="True"
+                    FontSize="Default"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Counts the number of times you click"
+                    Text="Sign In"
+                    WidthRequest="160" />
+
+                <Button
+                    x:Name="CounterBtn"
+                    Grid.Column="1"
+                    BackgroundColor="Red"
+                    Clicked="OnCounterClicked"
+                    FontAttributes="Bold"
+                    FontAutoScalingEnabled="True"
+                    FontSize="Default"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Counts the number of times you click"
+                    Text="Log out"
+                    WidthRequest="160" />
+
+            </Grid>
+
+        </VerticalStackLayout>
+
+
+
+    </ScrollView>
+
+</ContentPage>
